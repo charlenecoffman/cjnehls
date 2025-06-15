@@ -1,17 +1,18 @@
-import viteLogo from '/CJNehlsLogo.png'
-import './App.css'
+import { AboutAuthor } from './components/AboutAuthor';
+import { BookList } from './components/BookList';
+import { Contact } from './components/Contact';
+import { Layout } from './components/Layout';
+import { PageHeader } from './components/PageHeader';
 
 function App() {
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-      </div>
-      <h1>CJ Nehls</h1>
-    </>
+    <Layout>
+      <PageHeader />
+      <BookList />
+      <AboutAuthor />
+      <Contact />
+    </Layout>
   )
 }
 
