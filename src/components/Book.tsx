@@ -34,7 +34,7 @@ export const Book: React.FC<IBook> = ({ image, title, synopsis = [], link, isCom
 
   return (
     <div className="mx-4 my-8 flex justify-center">
-      <div className="flex flex-col sm:flex-row items-center gap-6 rounded-lg shadow-md px-4 py-6 w-full max-w-4xl bg-white bg-opacity-5">
+      <div className="flex flex-col sm:flex-row items-center gap-6 rounded-lg shadow-md px-4 py-6 w-full bg-white bg-opacity-5">
         {/* Left: Book Cover */}
         {image && (
           <div className="flex-shrink-0 sm:pr-6">
