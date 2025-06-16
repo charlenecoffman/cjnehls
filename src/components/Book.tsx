@@ -8,7 +8,13 @@ interface IBook {
   isComingSoon?: boolean;
 }
 
-export const Book: React.FC<IBook> = ({ image, title, synopsis = [], link, isComingSoon }) => {
+export const Book: React.FC<IBook> = ({
+  image,
+  title,
+  synopsis = [],
+  link,
+  isComingSoon,
+}) => {
   const getShortSynopsis = (synopsis: string[], wordCount: number) => {
     const words: string[] = [];
     let index = 0;
@@ -33,8 +39,8 @@ export const Book: React.FC<IBook> = ({ image, title, synopsis = [], link, isCom
   const shortSynopsis = getShortSynopsis(synopsis, 50);
 
   return (
-    <div className="mx-4 my-8 flex justify-center">
-      <div className="flex flex-col sm:flex-row items-center gap-6 rounded-lg shadow-md px-4 py-6 w-full bg-white bg-opacity-5">
+    <div className="mx-4 my-8 flex justify-center relative z-10">
+      <div className="flex flex-col sm:flex-row items-center gap-6 rounded-lg shadow-md px-4 py-6 w-full bg-white/5 backdrop-blur-sm">
         {/* Left: Book Cover */}
         {image && (
           <div className="flex-shrink-0 sm:pr-6">
@@ -46,19 +52,21 @@ export const Book: React.FC<IBook> = ({ image, title, synopsis = [], link, isCom
           </div>
         )}
 
-        {/* Right: Book Info */}
-        <div className="text-left w-full">
+        {/* Right: Book Info with semi-transparent background */}
+        <div className="w-full bg-[#060e1fcc] p-4 rounded-lg">
           <h2 className="text-xl sm:text-2xl font-bold mb-3">{title}</h2>
-          <p className="mb-4 text-sm sm:text-base leading-relaxed">{shortSynopsis}</p>
+          <p className="mb-4 text-sm sm:text-base leading-relaxed">
+            {shortSynopsis}
+          </p>
 
           {isComingSoon ? (
-            <span className="text-sm text-gray-400 italic">Coming Soon!</span>
+            <span className="text-sm text-gray-300 italic">Coming Soon!</span>
           ) : (
             <a
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:underline text-sm font-medium"
+              className="text-blue-300 hover:underline text-sm font-medium"
             >
               Buy on Amazon →
             </a>
