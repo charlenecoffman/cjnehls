@@ -2,7 +2,7 @@ import React from 'react';
 
 export const AboutAuthor: React.FC = () => {
   return (
-    <section id="about" className="w-full px-4 py-12 relative z-10">
+    <section id="about" className="w-full px-4 pt-52 pb-12 relative z-10">
       <div className="flex flex-col md:flex-row items-center md:items-start max-w-6xl mx-auto gap-8">
         {/* Text Content */}
         <div className="w-full md:w-2/3 bg-[#060e1fcc] p-6 rounded-lg shadow-md backdrop-blur-sm">
