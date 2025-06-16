@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { ContactForm } from '../domain/ContactForm';
+import { sendContactUsEmail } from '../clients/EmailClient';
 
 export const Contact: React.FC = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [emailSent, setEmailSent] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -10,14 +13,14 @@ export const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Submitted form:', form);
-
-    
-
+    sendContactUsEmail({message: form.message, name: form.name, email: form.email} as ContactForm);
+    setEmailSent(true);
   };
 
   return (
     <section id="contact" className="w-full px-4 py-12 pt-52 relative z-10 text-white">
+      {emailSent && <div>Email was sent!</div>}
+      {!emailSent && (
       <div className="max-w-2xl mx-auto">
         <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
@@ -68,6 +71,7 @@ export const Contact: React.FC = () => {
           </button>
         </form>
       </div>
+      )}
     </section>
   );
 };

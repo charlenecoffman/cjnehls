@@ -53,7 +53,7 @@ export const Layout: React.FC<ILayout> = ({ children }) => {
 
       {/* Main content — apply margin here */}
       <div className="h-[5rem] bg-[#060e1f]" />
-      <div className="relative z-10 !px-24 !py-32 md:!px-32 md:!py-40">
+      <div className="relative z-10 px-4 py-12 sm:px-8 md:px-16 lg:px-24 xl:px-32">
         <div className="max-w-6xl mx-auto">
           {children}
         </div>
