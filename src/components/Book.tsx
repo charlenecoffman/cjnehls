@@ -32,11 +32,14 @@ export const Book: React.FC<IBook> = ({
 
       index++;
     }
-
+    
+    if(words.length === 1 && words[0] === ""){
+      return "";
+    }
     return words.join(' ') + '...';
   };
 
-  const shortSynopsis = getShortSynopsis(synopsis, 50);
+  const shortSynopsis = getShortSynopsis(synopsis, 100);
 
   return (
     <div className="mx-4 my-8 flex justify-center relative z-10">
