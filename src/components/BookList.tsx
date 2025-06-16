@@ -14,13 +14,31 @@ const booklist = [
         ],
         isComingSoon: false,
         link: 'https://amzn.eu/d/9NZzUkf'
+    },
+    {
+        image: '/Kneel.jpg',
+        title: 'Kneel',
+        synopsis: [''],
+        isComingSoon: true,
+    },
+    {
+        image: '/Command.jpg',
+        title: 'Command',
+        synopsis: [''],
+        isComingSoon: true,
+    },
+    {
+        image: '/M&M.jpg',
+        title: 'Of Meloncholy & Moonlight',
+        synopsis: [''],
+        isComingSoon: true,
     }
 ]
 
 export const BookList: React.FC = () => {
   return (
     <section
-      id="book_section"
+      id="books"
       className="pt-32 sm:pt-40 md:pt-56 lg:pt-64 xl:pt-72"
     >
       {booklist.map((book, i) => (
