@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
         <Facebook size={28} />
       </a>
       <a
-        href="https://www.instagram.com/YOUR_PROFILE"
+        href="https://www.instagram.com/Cjnehls.author"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
