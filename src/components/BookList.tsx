@@ -19,7 +19,8 @@ const booklist = [
                     'Kneel is a slow-burn, emotionally rich romance about power, surrender, and the kind of love that strips you bare.',
                     'He built an empire on control—until she taught him how to fall to his knees.'
                   ],
-        isComingSoon: true,
+        isComingSoon: false,
+        link: 'https://a.co/d/fCssHEu'
     },
     {
         image: '/Command.jpg',
