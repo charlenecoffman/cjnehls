@@ -20,7 +20,8 @@ const booklist = [
                     'He built an empire on control—until she taught him how to fall to his knees.'
                   ],
         isComingSoon: false,
-        link: 'https://a.co/d/fCssHEu'
+        link: 'https://a.co/d/fCssHEu',
+        series: 'The Quiet Power Duology'
     },
     {
         image: '/Command.jpg',
@@ -31,6 +32,7 @@ const booklist = [
           'Until her.'
         ],
         isComingSoon: true,
+        series: 'The Quiet Power Duology'
     },
     {
         image: '/M&M.jpg',
@@ -41,7 +43,7 @@ const booklist = [
         ],
         isComingSoon: true,
     }
-]
+];
 
 export const BookList: React.FC = () => {
   return (
@@ -57,6 +59,7 @@ export const BookList: React.FC = () => {
           synopsis={book.synopsis}
           link={book.link}
           isComingSoon={book.isComingSoon}
+          series={book.series}
         />
       ))}
     </section>

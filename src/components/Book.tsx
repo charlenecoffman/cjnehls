@@ -6,6 +6,7 @@ interface IBook {
   synopsis?: string[];
   link?: string;
   isComingSoon?: boolean;
+  seriesName?: string;
 }
 
 export const Book: React.FC<IBook> = ({
@@ -14,6 +15,7 @@ export const Book: React.FC<IBook> = ({
   synopsis = [],
   link,
   isComingSoon,
+  series
 }) => {
   const getShortSynopsis = (synopsis: string[], wordCount: number) => {
     const words: string[] = [];
@@ -58,6 +60,7 @@ export const Book: React.FC<IBook> = ({
         {/* Right: Book Info with semi-transparent background */}
         <div className="w-full bg-[#060e1fcc] p-4 rounded-lg">
           <h2 className="text-xl sm:text-2xl font-bold mb-3">{title}</h2>
+          <h3 className="text-sm italic mb-3">{series}</h3>
           <p className="mb-4 text-sm sm:text-base leading-relaxed">
             {shortSynopsis}
           </p>
