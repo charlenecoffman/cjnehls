@@ -34,15 +34,6 @@ const booklist = [
         isComingSoon: true,
         series: 'The Quiet Power Duology'
     },
-    {
-        image: '/M&M.jpg',
-        title: 'Of Meloncholy & Moonlight',
-        synopsis: [
-          'Of Melancholy & Moonlight is a collection of haunting, lyrical stories about grief, memory, and the quiet magic that lives in the spaces we almost forget.',
-          'For anyone who\’s ever dreamed of something they\’ve lost—and felt it dream back.'
-        ],
-        isComingSoon: true,
-    }
 ];
 
 export const BookList: React.FC = () => {
